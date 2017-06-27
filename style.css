@@ -1,0 +1,110 @@
+@font-face {
+	font-family: 'AlegreyaBlack';
+	src: url('./fonts/AlegreyaSansSC-Black.ttf');
+}
+
+@font-face {
+	font-family: 'AlegreyaRegular';
+	src: url('./fonts/AlegreyaSansSC-Regular.ttf');
+}
+
+@font-face {
+	font-family: 'AlegreyaBold';
+	src: url('./fonts/AlegreyaSansSC-Bold.ttf');
+}
+
+body {
+	background-color: white;
+	text-align: center;
+}
+
+h1 {
+	font-family: 'AlegreyaBlack';
+	font-size: 86px;
+	line-height:0;
+	padding:0;
+	margin:0;
+	-webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  text-shadow: 2px 2px 2px #000,
+							-2px 2px 2px #000,
+							2px -2px 2px #000,
+							-2px -2px 2px #000;
+	color: #fff;
+	right:0;
+	left:0;
+	position:absolute;
+	opacity: 0;
+}
+
+#firstname {
+	top: 66px;
+}
+
+#lastname {
+	top: 126px;
+}
+
+h2 {
+	font-family: 'AlegreyaBold';
+	font-size: 2.25em;
+	text-shadow: 2px 2px 4px #ffffff,
+							-2px 2px 4px #ffffff,
+							2px -2px 4px #ffffff,
+							-2px -2px 4px #ffffff,
+							2px 2px 4px #ffffff,
+							-2px 2px 4px #ffffff,
+							2px -2px 4px #ffffff,
+							-2px -2px 4px #ffffff,
+							2px 2px 4px #ffffff,
+							-2px 2px 4px #ffffff,
+							2px -2px 4px #ffffff,
+							-2px -2px 4px #ffffff;
+	animation-name: fadein;
+	animation-duration: 7s;
+}
+
+p {
+	font-family: 'AlegreyaRegular';
+	font-size: 1.75em;
+	line-height: 0.85em;
+	text-shadow: 2px 2px 4px #ffffff,
+							-2px 2px 4px #ffffff,
+							2px -2px 4px #ffffff,
+							-2px -2px 4px #ffffff,
+							2px 2px 4px #ffffff,
+							-2px 2px 4px #ffffff,
+							2px -2px 4px #ffffff,
+							-2px -2px 4px #ffffff,
+							2px 2px 4px #ffffff,
+							-2px 2px 4px #ffffff,
+							2px -2px 4px #ffffff,
+							-2px -2px 4px #ffffff;
+	animation-name: fadein;
+	animation-duration: 9s;
+}
+
+a {
+	animation-name: fadein;
+	animation-duration: 11s;
+	font-family: 'AlegreyaRegular';
+}
+
+.col-md-8 {
+	padding: 0 2em 0;
+}
+
+.container {
+	margin-top:140px;
+}
+
+#name {
+	visibility: hidden;
+}
+
+/* ---- Animations ---- */
+@keyframes fadein {
+	0% {opacity:0;}
+	50% {opacity:0;}
+	100% {opacity:1;}
+}
