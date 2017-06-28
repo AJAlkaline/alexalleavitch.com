@@ -208,9 +208,14 @@ var _interpolateHSL = function(color1, color2, factor) {
   });
 
 	var snakes = [];
-  var colormod = 1;
-  if(window.width < 700) {
-    colormod = window.width/700;
+  var colorwidth = 700;
+  var coloroffset = 0;
+  if(window.innerWidth < 700) {
+    colorwidth = 700;
+    coloroffset = Math.floor(700/2 - window.innerWidth/2);
+  }
+  else {
+  	colorwidth = window.innerWidth;
   }
 
 	var snake = function(id, position) {
@@ -232,9 +237,13 @@ var _interpolateHSL = function(color1, color2, factor) {
     }
 		this.getColor = function() {
 			if(!this.colordefined)
-				return 'rgb(' + Math.floor(255*(this.points[0].y*snakesize/(canvas.height)) + 100*this.rcolormod/colormod) + 
-					', ' + Math.floor(colormod*255*(this.points[0].x*snakesize/(canvas.width)) + 100*this.gcolormod/colormod) +
-					', ' + Math.floor(colormod*255 - 255*(this.points[0].x*snakesize/canvas.width) + 100*this.bcolormod/colormod) + ')';
+				return 'rgb(' + Math.floor(255*(this.points[0].y*snakesize/(canvas.height)) 
+							+ 100*this.rcolormod) + 
+					', ' + Math.floor(255*(this.points[0].x*snakesize/(colorwidth-coloroffset)) 
+							+ 100*this.gcolormod) +
+					', ' + Math.floor(255*((colorwidth-coloroffset)/colorwidth) 
+							- 255*(this.points[0].x*snakesize/(colorwidth-coloroffset)) 
+							+ 100*this.bcolormod) + ')';
 
 			else {
 				return 'rgb(' + this.imgdata.data[0] + ', ' + this.imgdata.data[1] + ', '	+ this.imgdata.data[2] + ')';	
