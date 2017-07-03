@@ -487,24 +487,33 @@ var lJS = function(tag_id, params) {
 		  var resizeTimeout;
 		  var resizeThrottler = function() {
 
-		  	if(lJS.requestid != null) {
-		  		lJS.ctx.clearRect(0,0, lJS.canvas.width, lJS.canvas.height);
-		  		window.cancelRequestAnimFrame(lJS.requestid);
-		  		lJS.requestid = null;
+		  	var body = document.body,
+		    html = document.documentElement;
+
+				var height = Math.max( body.scrollHeight, body.offsetHeight, 
+		                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+		  	if(lJS.canvas.width != window.innerWidth || lJS.canvas.height != height) {
+
+				  	if(lJS.requestid != null) {
+				  		lJS.ctx.clearRect(0,0, lJS.canvas.width, lJS.canvas.height);
+				  		window.cancelRequestAnimFrame(lJS.requestid);
+				  		lJS.requestid = null;
+				  	}
+				    // wait until the user has stopped resizing to reinit
+				    if(resizeTimeout) {
+				    	clearTimeout(resizeTimeout);
+				    	resizeTimeout = null;
+				    }
+				    if(!resizeTimeout) {
+				      resizeTimeout = setTimeout(function() {
+				        resizeTimeout = null;
+				        actualResizeHandler();
+				     
+				       // The actualResizeHandler will execute at a rate of 15fps
+				       }, 1000 / 5);
+				    }
 		  	}
-		    // wait until the user has stopped resizing to reinit
-		    if(resizeTimeout) {
-		    	clearTimeout(resizeTimeout);
-		    	resizeTimeout = null;
-		    }
-		    if(!resizeTimeout) {
-		      resizeTimeout = setTimeout(function() {
-		        resizeTimeout = null;
-		        actualResizeHandler();
-		     
-		       // The actualResizeHandler will execute at a rate of 15fps
-		       }, 1000 / 5);
-		    }
 		  }
 
 		  window.addEventListener("resize", resizeThrottler, false);
