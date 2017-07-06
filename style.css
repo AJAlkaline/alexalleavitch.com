@@ -9,68 +9,96 @@
 }
 
 body {
-	background-color: white;
+	background-color: 1c1c1c;
 	text-align: center;
 }
 
 h2 {
 	font-family: 'AlegreyaBold';
 	font-size: 2.25em;
-	text-shadow: 2px 2px 2px #ffffff,
-							-2px 2px 2px #ffffff,
-							2px -2px 2px #ffffff,
-							-2px -2px 2px #ffffff,
-							2px 2px 2px #ffffff,
-							-2px 2px 2px #ffffff,
-							2px -2px 2px #ffffff,
-							-2px -2px 2px #ffffff,
-							2px 2px 2px #ffffff,
-							-2px 2px 2px #ffffff,
-							2px -2px 2px #ffffff,
-							-2px -2px 2px #ffffff;
+	text-shadow: 1px 1px  #efefef,
+							-1px 1px  #efefef,
+							1px -1px  #efefef,
+							-1px -1px  #efefef;
+						/*	2px 2px 1px #efefef,
+							-2px 2px 1px #efefef,
+							2px -2px 1px #efefef,
+							-2px -2px 1px #efefef,
+							2px 2px 1px #efefef,
+							-2px 2px 1px #efefef,
+							2px -2px 1px #efefef,
+							-2px -2px 1px #efefef;*/
 	animation-name: fadein;
 	animation-duration: 5s;
 }
 
 p {
-	font-family: 'AlegreyaRegular';
+	font-family: 'AlegreyaBold';
 	font-size: 1.35em;
 	line-height: 0.85em;
 	padding: 7px;
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,0.85);
+	border-width: : 4px;
+	border-style: double;
+	border-color: #1c1c1c;
 	animation-name: fadein;
 	animation-duration: 6s;
+	text-shadow: 1px 1px  #efefef,
+							-1px 1px  #efefef,
+							1px -1px  #efefef,
+							-1px -1px  #efefef;
 }
 
 a {
 	animation-name: fadein;
 	animation-duration: 8s;
-	font-family: 'AlegreyaRegular';
+	font-size: 3em;
+	font-family: 'AlegreyaBold';
+	text-shadow: 1px 1px  #efefef,
+							-1px 1px  #efefef,
+							1px -1px  #efefef,
+							-1px -1px  #efefef;
 	
 }
 
 .btn-default {
-	background-color: rgba(255,255,255,0.8);
+	background-color: rgba(255,255,255,0.85);
 	border-radius: 0;
-	border-width: 2px;
-	margin: 5px;
+	border-width: 4px;
+	border-style: double;
+	border-color: #1c1c1c;
+	color: #000;
+	flex-grow:1;
 }
 
 .btn-default:hover, .btn-default:focus {
-	background-color: rgba(230,230,230,0.8)
+	background-color: rgba(230,230,230,0.2);
+	color: #efefef;
+	text-shadow: 1px 1px  #1c1c1c,
+							-1px 1px  #1c1c1c,
+							1px -1px  #1c1c1c,
+							-1px -1px  #1c1c1c;
 }
 
 .btn-default:active, .btn-default:active:focus, .btn-default:active:hover {
 	background-color: rgba(255,255,255,0.2);
+	color: #efefef;
+}
+
+.btn-row {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap:wrap;
 }
 
 .container {
 	margin-top:140px;
 }
 
+
 /* ---- Animations ---- */
 @keyframes fadein {
 	0% {opacity:0;}
-	80% {opacity:0;}
+	60% {opacity:0;}
 	100% {opacity:1;}
 }
