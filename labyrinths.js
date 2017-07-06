@@ -530,7 +530,8 @@ var lJS = function(tag_id, params) {
         var height = Math.max( body.scrollHeight, body.offsetHeight, 
                            html.clientHeight, html.scrollHeight, html.offsetHeight );
 
-        if(lJS.canvas.width != window.innerWidth || lJS.canvas.height != height) {
+        if(lJS.canvas.width*window.devicePixelRatio != window.innerWidth || 
+           lJS.canvas.height*window.devicePixelRatio != height) {
 
             if(lJS.requestid != null) {
               lJS.ctx.clearRect(0,0, lJS.canvas.width, lJS.canvas.height);
