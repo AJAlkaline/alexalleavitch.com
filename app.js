@@ -5,7 +5,7 @@ WebFontConfig = {
   },
 	active: function() {
 		var params = {
-			bgcolor: setbgcolor,
+			bgcolor: '#1c1c1c',
 			guide: {
 				canvas: null,
 				offsetX: 0,
