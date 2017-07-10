@@ -7,23 +7,14 @@
   <meta name="author" content="Alex Alleavitch" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-	<link rel="stylesheet" media="screen" href="style.css">
-
-	<script src="https://code.jquery.com/jquery-3.2.1.min.js"
-  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
-  crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+ <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+ <link rel="stylesheet" media="screen" href="style.css">
 </head>
 <body>
 <div class="container">
 	<div class="row">
-		<div class="col-md-4 col-md-offset-4">
-			<h2>Developer | Designer</h2>
-		</div>
-	</div>
-	<div class="row">
 		<div class="col-md-6 col-md-offset-3">
+			<h2>Developer | Designer</h2>
 			<p>I'm a front-end dev who enjoys crafting unique and engaging user experiences. I also dabble in art, data science,  and game design.</p>
 		</div>
 	</div>
@@ -45,10 +36,12 @@
 		</div>
 	</div>
 </div>
+
 <!-- labyrinths.js container -->
-<canvas id="labyrinths" style="position:absolute;left:0;top:0;z-index:-1;"></div>
+<canvas id="labyrinths"></canvas>
 
 <!-- scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
 <script src="labyrinths.js"></script>
 <script src="app.js"></script>
 

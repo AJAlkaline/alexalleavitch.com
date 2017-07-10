@@ -1,64 +1,48 @@
-@font-face {
-	font-family: 'AlegreyaRegular';
-	src: url('./fonts/AlegreyaSansSC-Regular.ttf');
-}
-
-@font-face {
-	font-family: 'AlegreyaBold';
-	src: url('./fonts/AlegreyaSansSC-Bold.ttf');
-}
-
 body {
-	background-color: 1c1c1c;
+	background-color: #1c1c1c;
 	text-align: center;
 }
 
 h2 {
-	font-family: 'AlegreyaBold';
-	font-size: 2.25em;
+	font-weight: 900;
+	font-size: 1.6em;
+	padding: 7px;
 	text-shadow: 1px 1px  #efefef,
 							-1px 1px  #efefef,
 							1px -1px  #efefef,
 							-1px -1px  #efefef;
-						/*	2px 2px 1px #efefef,
-							-2px 2px 1px #efefef,
-							2px -2px 1px #efefef,
-							-2px -2px 1px #efefef,
-							2px 2px 1px #efefef,
-							-2px 2px 1px #efefef,
-							2px -2px 1px #efefef,
-							-2px -2px 1px #efefef;*/
+	animation-name: fadein;
+	animation-duration: 4s;
+}
+
+p {
+	font-size: 1.35em;
+	line-height: 0.85em;
+	padding: 7px;
 	animation-name: fadein;
 	animation-duration: 5s;
 }
 
-p {
-	font-family: 'AlegreyaBold';
-	font-size: 1.35em;
-	line-height: 0.85em;
-	padding: 7px;
-	background-color: rgba(255,255,255,0.85);
+a {
+	animation-name: fadein;
+	animation-duration: 6s;
+	font-size: 3em;
+}
+
+h2, p, a {
+	font-family: 'Alegreya Sans SC', sans-serif;
 	border-width: : 4px;
 	border-style: double;
 	border-color: #1c1c1c;
-	animation-name: fadein;
-	animation-duration: 6s;
+	background-color: rgba(239,239,239,0.85);
 	text-shadow: 1px 1px  #efefef,
-							-1px 1px  #efefef,
-							1px -1px  #efefef,
-							-1px -1px  #efefef;
+						-1px 1px  #efefef,
+						1px -1px  #efefef,
+						-1px -1px  #efefef;
 }
 
-a {
-	animation-name: fadein;
-	animation-duration: 8s;
-	font-size: 3em;
-	font-family: 'AlegreyaBold';
-	text-shadow: 1px 1px  #efefef,
-							-1px 1px  #efefef,
-							1px -1px  #efefef,
-							-1px -1px  #efefef;
-	
+p, a {
+	font-weight: 700;
 }
 
 .btn-default {
@@ -92,7 +76,14 @@ a {
 }
 
 .container {
-	margin-top:140px;
+	margin-top:165px;
+}
+
+.labyrinths {
+	position:absolute;
+	left:0;
+	top:0;
+	z-index:-1;
 }
 
 
